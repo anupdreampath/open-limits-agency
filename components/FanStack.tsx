@@ -14,18 +14,40 @@ export type FanCardSpec = {
 export default function FanStack({
   cards,
   height = 520,
-  pivot = 'bottom'
+  pivot = 'bottom',
+  mobileScale = 0.6,
+  mobileShiftX = 0,
 }: {
   cards: FanCardSpec[];
   height?: number;
   pivot?: 'bottom' | 'center';
+  mobileScale?: number;
+  mobileShiftX?: number;
 }) {
+  const mh = Math.round(height * mobileScale);
+  // Auto-center + optional manual nudge
+  const avgOffsetX = cards.reduce((s, c) => s + c.offsetX, 0) / cards.length;
+  const centerX = -avgOffsetX * mobileScale + mobileShiftX;
   return (
-    <div className="relative w-full" style={{ height }}>
-      {cards.map((c, i) => (
-        <FanCard key={i} spec={c} index={i} pivot={pivot} />
-      ))}
-    </div>
+    <>
+      {/* Mobile: scaled down + centered so cards fit in viewport */}
+      <div className="relative w-full overflow-hidden md:hidden" style={{ height: mh }}>
+        <div
+          className="absolute w-full top-0 left-0 origin-top"
+          style={{ height, transform: `translateX(${centerX}px) scale(${mobileScale})` }}
+        >
+          {cards.map((c, i) => (
+            <FanCard key={i} spec={c} index={i} pivot={pivot} />
+          ))}
+        </div>
+      </div>
+      {/* Desktop: original full-size fan */}
+      <div className="relative w-full hidden md:block" style={{ height }}>
+        {cards.map((c, i) => (
+          <FanCard key={i} spec={c} index={i} pivot={pivot} />
+        ))}
+      </div>
+    </>
   );
 }
 

@@ -26,9 +26,9 @@ export default function Footer() {
         <div>
           <p className="font-semibold text-greenbrand">Contact us</p>
           <ul className="mt-4 space-y-2 text-ink/70">
-            <li className="flex items-center gap-2"><Icon name="mail" /><a href={`mailto:${BRAND.email}`} className="hover:text-greenbrand">{BRAND.email}</a></li>
-            <li className="flex items-center gap-2"><Icon name="phone" />{BRAND.phone}</li>
-            <li className="flex items-center gap-2"><Icon name="pin" />{BRAND.city}</li>
+            <li className="flex items-start gap-2"><Icon name="mail" /><a href={`mailto:${BRAND.email}`} className="hover:text-greenbrand">{BRAND.email}</a></li>
+            <li className="flex items-start gap-2"><Icon name="phone" />{BRAND.phone}</li>
+            <li className="flex items-start gap-2"><Icon name="pin" />{BRAND.address}</li>
           </ul>
         </div>
       </div>

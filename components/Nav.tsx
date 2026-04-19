@@ -17,23 +17,10 @@ export default function Nav() {
             <Link href="/" className="hover:text-leaf transition">Home</Link>
             <Link href="/portfolio" className="hover:text-leaf transition">Portfolio</Link>
             <Link href="/aboutus" className="hover:text-leaf transition">About us</Link>
+            <Link href="/contact" className="hover:text-leaf transition">Contact</Link>
           </nav>
-          <a href={BRAND.calendly} target="_blank" rel="noreferrer" className="btn-pill small">
-            Book a call
-            <span className="arrow" aria-hidden>
-              <ArrowRight />
-            </span>
-          </a>
         </div>
       </header>
     </div>
-  );
-}
-
-function ArrowRight() {
-  return (
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-      <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
   );
 }

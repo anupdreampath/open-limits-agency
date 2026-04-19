@@ -21,8 +21,8 @@ export default function PerformancePartnershipCombo() {
   return (
     <section className="relative overflow-hidden">
       {/* Top half - Performance (cream background) */}
-      <div className="section-cream pt-24 pb-32">
-        <div className="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-16 items-center">
+      <div className="section-cream pt-14 pb-14 md:pt-24 md:pb-32">
+        <div className="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div>
             <p className="eyebrow orange">Performance Creatives</p>
             <h2 className="mt-3 font-display font-semibold text-4xl md:text-5xl leading-[1.1]" style={{ color: '#965F27' }}>
@@ -36,15 +36,17 @@ export default function PerformancePartnershipCombo() {
             </p>
           </div>
 
-          <FanStack cards={perfCards} height={420} pivot="center" />
+          {/* Performance fan: span ~660px wide → scale 0.52 fits in ~340px mobile column */}
+          <FanStack cards={perfCards} height={420} pivot="center" mobileScale={0.52} mobileShiftX={25} />
         </div>
       </div>
 
       {/* Bottom half - Partnership (lavender background) */}
-      <div className="section-lavender pt-32 pb-24">
-        <div className="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-16 items-center">
+      <div className="section-lavender pt-14 pb-14 md:pt-32 md:pb-24">
+        <div className="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="order-2 md:order-1">
-            <FanStack cards={partnerCards} height={420} pivot="bottom" />
+            {/* Partnership fan: span ~520px wide → scale 0.65 fits in ~340px mobile column */}
+            <FanStack cards={partnerCards} height={420} pivot="bottom" mobileScale={0.65} mobileShiftX={25} />
           </div>
 
           <div className="order-1 md:order-2">

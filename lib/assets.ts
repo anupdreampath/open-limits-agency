@@ -4,8 +4,8 @@
 export const BRAND = {
   name: 'Open Limits',
   email: 'hello@openlimits.co',
-  phone: '+91 98765 43210',
-  city: 'Bengaluru, India',
+  phone: '+91 92174 84799',
+  address: 'TOWER -1, Assotech Business Cresterra, UNIT NO.1009, PLOT NO. 22, Sector 135, Noida, Uttar Pradesh 201301',
   calendly: 'https://calendly.com/himanshu-sethi/30min',
   instagram: 'https://www.instagram.com/',
   linkedin: 'https://www.linkedin.com/'
