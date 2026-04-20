@@ -25,7 +25,7 @@ export default function PortfolioPage() {
     <main>
       <Nav />
 
-      <section className="hero-gradient py-20">
+      <section className="hero-gradient pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-5 text-center">
           <span className="eyebrow">Portfolio</span>
           <h1 className="mt-4 font-display text-5xl md:text-6xl leading-tight text-ink">

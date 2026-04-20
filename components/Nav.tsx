@@ -23,9 +23,9 @@ export default function Nav() {
       <header
         className="fade-up pointer-events-auto w-full max-w-5xl rounded-full bg-white/75 backdrop-blur-md border border-ink/5 shadow-[0_10px_30px_-10px_rgba(17,56,33,0.15)]"
       >
-        <div className="flex items-center justify-start pl-6 pr-3 py-3 md:py-4">
-          <Link href="/" className="flex items-center gap-3">
-            <Monogram className="w-10 h-10" />
+        <div className="flex items-center justify-start pl-2 pr-3 py-3 md:py-4">
+          <Link href="/" className="flex items-center gap-12 overflow-visible">
+            <Monogram className="w-10 h-10 scale-[3] origin-left" />
             <Wordmark />
           </Link>
           
@@ -45,7 +45,7 @@ export default function Nav() {
           {/* Mobile Burger Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-full hover:bg-ink/5 transition"
+            className="md:hidden ml-auto p-2 rounded-full hover:bg-ink/5 transition"
             aria-label="Toggle menu"
           >
             {isOpen ? (
@@ -59,7 +59,7 @@ export default function Nav() {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="md:hidden fixed inset-x-4 top-20 z-40">
+        <div className="md:hidden fixed inset-x-4 top-20 z-40 pointer-events-auto">
           <div className="bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(17,56,33,0.2)] border border-ink/5 overflow-hidden">
             <nav className="flex flex-col py-2">
               {navLinks.map((link, index) => (

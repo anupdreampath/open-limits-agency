@@ -9,7 +9,7 @@ export default function DOOHPage() {
       <Nav />
 
       {/* Hero Section with Background Image */}
-      <section className="relative py-20 md:py-28 min-h-[600px] flex items-center">
+      <section className="relative pt-32 pb-20 md:py-28 min-h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://screenox.in/wp-content/uploads/2023/06/Website-Template-4-scaled.jpg"
