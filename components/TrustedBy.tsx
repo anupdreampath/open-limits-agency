@@ -8,18 +8,18 @@ export default function TrustedBy() {
     <section className="py-14 bg-white">
       <p className="text-center text-base font-medium text-ink/55">Trusted by</p>
       <div className="mt-6 space-y-6 mask-fade-x">
-        <Row logos={row1} dir="marquee" />
-        <Row logos={row2} dir="marquee-rev" />
+        <Row logos={row1} />
+        <Row logos={row2} reverse />
       </div>
     </section>
   );
 }
 
-function Row({ logos, dir }: { logos: string[]; dir: 'marquee' | 'marquee-rev' }) {
+function Row({ logos, reverse = false }: { logos: string[]; reverse?: boolean }) {
   const doubled = [...logos, ...logos, ...logos];
   return (
     <div className="overflow-hidden">
-      <ul className={`flex gap-14 items-center animate-${dir} gpu w-max`}>
+      <ul className={`flex gap-14 items-center ${reverse ? 'animate-marquee-rev' : 'animate-marquee'} gpu w-max`}>
         {doubled.map((src, i) => (
           <li key={i} className="shrink-0">
             <img
