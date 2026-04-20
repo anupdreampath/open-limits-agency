@@ -64,7 +64,7 @@ export default function PortfolioPage() {
                 onClick={() => setCount(c => c + PAGE_SIZE)}
                 className="px-8 py-3 rounded-full bg-greenbrand text-white text-sm font-medium hover:bg-greenbrand/90 transition-colors"
               >
-                Load More ({remaining} remaining)
+                Load More
               </button>
             </div>
           )}

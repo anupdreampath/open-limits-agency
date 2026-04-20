@@ -6,7 +6,7 @@ import { Wordmark, Monogram } from './BrandMark';
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-ink/5">
-      <div className="max-w-7xl mx-auto px-5 py-16 grid md:grid-cols-[1.4fr_1fr_1.2fr] gap-10">
+      <div className="max-w-7xl mx-auto px-5 py-16 grid md:grid-cols-[1.5fr_1fr_1fr_1.2fr] gap-8">
         <div>
           <div className="flex items-center gap-2">
             <Monogram className="w-9 h-9" />
@@ -17,10 +17,19 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <p className="font-semibold text-greenbrand">Resources</p>
+          <p className="font-semibold text-greenbrand">Company</p>
           <ul className="mt-4 space-y-2 text-ink/70">
-            <li><Link href="/portfolio" className="hover:text-greenbrand">Portfolio</Link></li>
             <li><Link href="/aboutus" className="hover:text-greenbrand">About us</Link></li>
+            <li><Link href="/portfolio" className="hover:text-greenbrand">Portfolio</Link></li>
+            <li><Link href="/contact" className="hover:text-greenbrand">Contact</Link></li>
+          </ul>
+        </div>
+        <div>
+          <p className="font-semibold text-greenbrand">Legal</p>
+          <ul className="mt-4 space-y-2 text-ink/70">
+            <li><Link href="/privacy-policy" className="hover:text-greenbrand">Privacy Policy</Link></li>
+            <li><Link href="/cookie-policy" className="hover:text-greenbrand">Cookie Policy</Link></li>
+            <li><Link href="/terms-of-use" className="hover:text-greenbrand">Terms of Use</Link></li>
           </ul>
         </div>
         <div>

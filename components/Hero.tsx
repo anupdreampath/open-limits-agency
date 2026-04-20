@@ -1,7 +1,12 @@
-import { HERO_VIDEOS, BRAND } from '@/lib/assets';
+'use client';
+
+import { HERO_VIDEOS } from '@/lib/assets';
 import { Monogram } from './BrandMark';
+import { useBookCall } from '@/lib/BookCallContext';
 
 export default function Hero() {
+  const { openModal } = useBookCall();
+
   return (
     <section className="hero-bg relative overflow-hidden pt-32 pb-16">
       <div className="absolute top-24 right-6 md:right-16 opacity-80 pointer-events-none">
@@ -20,12 +25,12 @@ export default function Hero() {
         </p>
 
         <div className="fade-up d-2 mt-8">
-          <a href={BRAND.calendly} target="_blank" rel="noreferrer" className="btn-pill">
+          <button onClick={openModal} className="btn-pill">
             Book a call
             <span className="arrow" aria-hidden>
               <ArrowRight />
             </span>
-          </a>
+          </button>
         </div>
       </div>
 
