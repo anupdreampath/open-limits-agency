@@ -14,7 +14,7 @@ export default function CtaCard() {
           style={{ background: 'linear-gradient(180deg, #EFFCF3 0%, #D3F5DF 100%)' }}
         >
           <div className="absolute left-6 top-1/2 -translate-y-1/2 opacity-90">
-            <Monogram className="w-12 h-12 md:w-14 md:h-14" color="#1D5F38" />
+            <Monogram className="w-12 h-12 md:w-14 md:h-14" />
           </div>
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 pl-16 md:pl-20">
             <div>

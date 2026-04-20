@@ -55,7 +55,7 @@ export default function About() {
 
           {/* Decorative monogram right */}
           <div className="absolute right-4 top-8 opacity-80">
-            <Monogram className="w-24 h-24 md:w-32 md:h-32" color="#4CC97F" />
+            <Monogram className="w-24 h-24 md:w-32 md:h-32" />
           </div>
 
           {/* Stat pills */}

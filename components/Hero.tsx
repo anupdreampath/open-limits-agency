@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section className="hero-bg relative overflow-hidden pt-32 pb-16">
       <div className="absolute top-24 right-6 md:right-16 opacity-80 pointer-events-none">
-        <Monogram className="w-16 h-16 md:w-24 md:h-24" color="#4CC97F" />
+        <Monogram className="w-16 h-16 md:w-24 md:h-24" />
       </div>
 
       <div className="max-w-7xl mx-auto px-5 text-center relative">
